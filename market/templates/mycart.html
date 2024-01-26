@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}
+My cart
+{% endblock %}
+{% block content %}
+
+   
+        
+       
+
+<style>
+  /* Custom CSS */
+  .product-image {
+    max-width: 100px;
+    height: auto;
+  }
+</style>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Price</th>
+      <th>Left</th>
+      <th>Purchase Item</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody style="color: black;">
+    {% for item in items %} 
+    {% include 'includes/items_modals.html' %}
+    <form method="POST" action="{{ url_for('address')}}">
+    <tr>
+      <td>{{ item.id }}</td>
+      <td>{{ item.itemname }}</td>
+      <td><img src="{{item.itempic}}" alt="Product 1" class="product-image"></td>
+      <td>${{ item.itemprice }}</td>
+      <td>{{ item.itemcount-1 }}</td>
+      <input type="hidden" name="nameofitem" value="{{ item.itemname }}">
+      <td><button class="btn btn-outline btn-info" data-toggle="modal" data-target="#exampleModalCenter">Purchase</button>
+      </td>
+    </tr>
+    </form>
+    {% endfor %}
+    
+  </tbody>
+</table>
+
+
+{% endblock %}

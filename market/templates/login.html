@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% block title %}
+    Login Page
+{% endblock %}
+
+
+
+{% block content %}
+
+<body class="text-center ">
+    <div class="container mb-3 mt-5">
+        <div class="row">
+          <div class="col-12 col-md-4 col-lg-4 mt-5">
+            <img class="login-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYQoyioLrPJylPg-bJT5vebTcPXRfaJPA8sQMywCWM5uSyaBtpWdvDjz9KBy9953ctFqE&usqp=CAU" alt="">
+            <div class="container-img mt-4">
+              <h2 class="title-img">
+                <span class="title-word title-word-1">Welcome</span>
+                <span class="title-word title-word-2">to</span>
+                <span class="title-word title-word-3">Flask</span>
+                <span class="title-word title-word-4">Mart</span>
+              </h2>
+            </div>
+          </div>
+
+          <div class="form col-12 col-md-8 col-lg-8 mt-3">
+                <form method="POST" class="container-form form-signin p-5 " >
+                  {{ form.hidden_tag() }}
+                  
+                  <h1 class="h3 mb-3 " style="font-weight: 600;color: #0a4275;">
+                      Login
+                  </h1>
+                  <br>
+              
+                  {{ form.username(class="form-control", placeholder="User Name") }}
+                  {{ form.password(class="form-control", placeholder="Password") }}
+      
+                  <br>
+                  {{ form.submit(class="btn btn-lg  btn-submit") }}
+                  <fieldset>
+                    <legend>or</legend>
+                  </fieldset>
+
+              </form>
+          </div>
+          
+
+  
+        </div>
+    </div>
+  
+    
+    <section class="" style="background-color: #0a4275;">
+        <!-- Footer -->
+        <footer class="text-center text-white" >
+          <!-- Grid container -->
+          <div class="container p-4 pb-0">
+            <!-- Section: CTA -->
+            <div class="checkbox mb-3 pb-4 pt-2" style="border-bottom:solid 2px aliceblue;">
+                <h5 class="fw-bolder">Do not have an account?</h5>
+                <a class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">Register</a>
+             </div>
+            <!-- <section class="">
+              <p class="d-flex justify-content-center align-items-center">
+                <span class="me-3">Register for free</span>
+                <button type="button" class="btn btn-outline-light btn-rounded">
+                  Sign up!
+                </button>
+              </p>
+            </section> -->
+            <!-- Section: CTA -->
+          </div>
+          <!-- Grid container -->
+      
+          <!-- Copyright -->
+          <div class="container p-4">
+            <!--Grid row-->
+            <div class="row">
+              <!--Grid column-->
+              <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Footer text</h5>
+        
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                  molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+                  aliquam voluptatem veniam, est atque cumque eum delectus sint!
+                </p>
+              </div>
+              <!--Grid column-->
+        
+              <!--Grid column-->
+              <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Footer text</h5>
+        
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                  molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+                  aliquam voluptatem veniam, est atque cumque eum delectus sint!
+                </p>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </div>
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-white" ></a>
+          </div>
+          <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+      </section>
+</body>
+{% endblock %}

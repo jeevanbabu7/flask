@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-commerce Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-lg-2 sidebar" style="background-color: aliceblue;height: 100%;">
+        <div class="logo text-center">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSErsY4xyoWnghkwWqsC-3vaEfo0XpaTOT97nts54LIPAfYpGvd48fnzxCo1z7dFyAJtaU&usqp=CAU" alt="Logo">
+            <h4 >{{current_user.username}}</h4>
+        </div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('go_cart')}}">My Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Customers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Analytics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Settings</a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Main Content -->
+      <div class="col-lg-10 main-content">
+        <h1>Welcome to your E-commerce Dashboard</h1>
+        <!-- Content Goes Here -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+{% endblock %}

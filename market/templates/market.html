@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Market page
+{% endblock %}
+
+{% block head %}
+    <style>
+        .custom-img {
+            width: 100%;
+            height: 200px; /* Adjust the height as desired */
+            object-fit: cover;
+        }
+    </style>
+{% endblock %}
+
+{% block content %} 
+<style>
+    .custom-card {
+      width: 18rem;
+      text-align: center;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+  
+    .custom-card:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+    }
+  
+    .custom-card .custom-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  
+    .custom-card .card-title {
+      margin-top: 10px;
+    }
+  
+    .custom-card .card-body {
+      padding: 10px;
+    }
+  
+    .custom-card button {
+      margin-top: 10px;
+    }
+  </style>
+  
+
+
+    <div class="container">
+        <div class="row pt-5">
+            {% for item in items %}
+            <div class="col-lg-4">
+                <form action="{{ url_for('add_to_cart') }} " method="POST">
+                    <div class="card custom-card" style="border-radius: 15px; box-shadow:0 4px 8px rgba(0, 0, 0, 0.2) ; object-fit: cover; transform: translateY(-2px);  transition: box-shadow 0.3s, transform 0.3s;">
+                        <img class="card-img-top custom-img" src="{{ item.image_url }}" alt="Image">
+                        <div class="card-body">
+                          <h3 class="card-title">{{ item.name }}</h3>
+                          <h3>${{ item.price }}</h3>
+                          <h3>{{ item.count }}</h3>
+                          <input type="hidden" name="username" value="{{ current_user.username }}">
+                          <input type="hidden" name="itemname" value="{{ item.name }}">
+                          <input type="hidden" name="itemprice" value="{{ item.price }}">
+                          <input type="hidden" name="itemcount" value="{{ item.count }}">
+                          <input type="hidden" name="itempic" value="{{ item.image_url }}">
+                          <p class="card-text"></p>
+                          <button type="submit" class="btn btn-primary">Add to cart</button>
+                        </div>
+                      </div>
+                </form>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

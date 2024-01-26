@@ -1,0 +1,179 @@
+body{
+  
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: Lexend Deca,sans-serif;
+    
+}
+a{
+  text-decoration: none;
+}
+.register-btn {
+  background-color:  #ff5c35; 
+  border-radius: 5px;
+}
+.register-btn:hover {
+    background-color: #ff5c35;
+    color: aliceblue;
+}
+nav {
+  background-color:whitesmoke;
+    
+    box-shadow: 1px 1px 12px #aaaaaa;
+}
+nav a {
+    font-size: medium;
+    font-weight: 700;
+    
+
+}
+.userlogo {
+  height: 40px;
+  width:40px;
+  background-color: #fff;
+  border-radius: 100%;
+}
+/*-------form section ---------------*/
+
+.form-control {
+    border: none;
+    margin-bottom: 25px;
+    border-bottom: solid #ACCFCB 3px ;
+    padding: 18px;
+    background-color: ghostwhite;
+    border-radius: 10px;
+    
+
+}
+.container-form {
+
+    max-width: 450px;
+    margin: 10px auto;
+    background-color: ghostwhite;
+    border-radius: 30px;
+    box-shadow: 0PX 1px 15px #888888;
+
+}
+
+.btn-submit {
+    width: 100px;
+    margin-bottom: 12px;
+    border-radius: 30px;
+    background-color: #ff5c35;
+    color: whitesmoke;
+    font-weight: 700;
+}
+.btn-submit:hover{
+    background-color: #3D8DAE;
+    
+}
+.under {
+  background-color: #DF8453;
+  height: 100%;
+  width: 100%;
+  margin-right: 0px;
+  z-index: -1;
+
+}
+
+.form-register {
+  
+}
+
+/*----------------------form  end ------------------->*/
+
+fieldset {
+    margin: 20px;
+    border-bottom: solid 1px black;
+}
+
+
+.title-word {
+    animation: color-animation 4s linear infinite;
+  }
+  
+  .title-word-1 {
+    --color-1: #DF8453;
+    --color-2: #3D8DAE;
+    --color-3: #E4A9A8;
+  }
+  
+  .title-word-2 {
+    --color-1: #DBAD4A;
+    --color-2: #ACCFCB;
+    --color-3: #17494D;
+  }
+  
+  .title-word-3 {
+    --color-1: #ACCFCB;
+    --color-2: #E4A9A8;
+    --color-3: #ACCFCB;
+  }
+  
+  .title-word-4 {
+    --color-1: #3D8DAE;
+    --color-2: #DF8453;
+    --color-3: #E4A9A8;
+  }
+  
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+  
+  /* Here are just some visual styles. 🖌 */
+  
+  .container-img {
+    display: grid;
+    place-items: center;  
+    text-align: center;
+  
+  }
+  
+  .title-img {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    
+    text-transform: uppercase;
+  }
+/*--------------------------------------MARKET----------------------------------*/
+
+.card{
+  border-radius:20px;
+
+}
+
+/*----------------------------------market end-------------------------------------*/
+
+/*-------------------------account section -------------------------------------*/
+.sidebar {
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.main-content {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.nav-link {
+  color: #000;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+/*-------------------form register--------------*/
+.form-register {border-radius: 10px;
+}

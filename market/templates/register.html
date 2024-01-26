@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% block title %}
+    Register page
+{% endblock %}
+
+{% block content %}
+    <div class="container-form text-center mb-3" >
+        <form method = "POST" class="form form-register p-5 mt-5" style="border-radius: 0%;">
+            {{ form.hidden_tag()}}
+            <img style="height: 50px;width: 50px;" class = "mb-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYQoyioLrPJylPg-bJT5vebTcPXRfaJPA8sQMywCWM5uSyaBtpWdvDjz9KBy9953ctFqE&usqp=CAU" alt="">
+            <h1 class="text-center">Register </h1>
+           
+            {{ form.username(class = "form-control",placeholder = "Username") }}
+
+      
+            {{ form.email_address(class = "form-control",placeholder = "Email Address") }}
+
+       
+            {{ form.password1(class = "form-control",placeholder = "Password") }}
+
+    
+            {{ form.password2(class = "form-control",placeholder = "Confirm password") }}
+            <br>
+            
+            {{form.submit(class = "btn btn-lg btn-primary")}}
+    
+        </form>
+    </div>
+    <section class="" style="background-color: #0a4275;">
+        <!-- Footer -->
+        <footer class="text-center text-white" >
+          <!-- Grid container -->
+          <div class="container p-4 pb-0">
+            <!-- Section: CTA -->
+            <div class="checkbox mb-3 pb-4 pt-2" style="border-bottom:solid 2px aliceblue;">
+                <h5 class="fw-bolder">Do have an account?</h5>
+                <a class="btn btn-sm btn-secondary" href="{{ url_for('register_page') }}">Login</a>
+             </div>
+            <!-- <section class="">
+              <p class="d-flex justify-content-center align-items-center">
+                <span class="me-3">Register for free</span>
+                <button type="button" class="btn btn-outline-light btn-rounded">
+                  Sign up!
+                </button>
+              </p>
+            </section> -->
+            <!-- Section: CTA -->
+          </div>
+          <!-- Grid container -->
+      
+          <!-- Copyright -->
+          <div class="container p-4">
+            <!--Grid row-->
+            <div class="row">
+              <!--Grid column-->
+              <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Footer text</h5>
+        
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                  molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+                  aliquam voluptatem veniam, est atque cumque eum delectus sint!
+                </p>
+              </div>
+              <!--Grid column-->
+        
+              <!--Grid column-->
+              <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Footer text</h5>
+        
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                  molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+                  aliquam voluptatem veniam, est atque cumque eum delectus sint!
+                </p>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </div>
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-white" ></a>
+          </div>
+          <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+      </section>
+
+{% endblock %}

@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom styles */
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .section-header h2 {
+      font-size: 24px;
+      margin-bottom: 0;
+    }
+    .section-header a {
+      color: #007bff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .section-card {
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 20px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+    }
+    .section-card .card-body {
+      padding: 10px;
+    }
+    .section-card .card-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .section-card .card-price {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    .section-card .card-previous-price {
+      font-size: 14px;
+      color: red;
+      text-decoration: line-through;
+    }
+  </style>
+  <title>Home - Ecommerce Website</title>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <!-- Add your header content here -->
+  </header>
+
+  <!-- Main Section -->
+  <main>
+    <section>
+      <div class="container">
+        <!-- Grocery Section -->
+        <div class="section-header">
+          <h2>Grocery</h2>
+          <a href="#grocery">See All</a>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="section-card">
+              <div class="card-body">
+                <h5 class="card-title">Rice</h5>
+                <p class="card-price">$10.99</p>
+                <p class="card-previous-price">$12.99</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="section-card">
+              <div class="card-body">
+                <h5 class="card-title">Vegetables</h5>
+                <p class="card-price">$5.99</p>
+                <p class="card-previous-price">$7.99</p>
+              </div>
+            </div>
+          </div>
+          <!-- Add more grocery items here -->
+        </div>
+
+        <!-- Other Sections -->
+        <!-- Add more sections here -->
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <!-- Add your footer content here -->
+  </footer>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+{% endblock %}
